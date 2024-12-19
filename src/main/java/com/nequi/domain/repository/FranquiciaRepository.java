@@ -1,8 +1,7 @@
-package com.nequi.infrastructure.persistence;
+package com.nequi.domain.repository;
 
 import com.nequi.domain.model.Franquicia;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
 import java.util.UUID;

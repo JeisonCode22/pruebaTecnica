@@ -1,0 +1,696 @@
+{
+	"info": {
+		"_postman_id": "5824f70d-f8f8-474f-a533-1216659369c2",
+		"name": "Nequi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20957248",
+		"_collection_link": "https://credigov2.postman.co/workspace/credigoV2-Workspace~2acd4bde-1547-4609-8d07-cf339a045836/collection/20957248-5824f70d-f8f8-474f-a533-1216659369c2?action=share&source=collection_link&creator=20957248"
+	},
+	"item": [
+		{
+			"name": "guardar franquicia",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\" : \"Lamborghini\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "ec2-3-81-230-186.compute-1.amazonaws.com:8080/api/v1/franquicia",
+					"host": [
+						"ec2-3-81-230-186",
+						"compute-1",
+						"amazonaws",
+						"com"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"franquicia"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "guardar franquicia",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\" : \"Lamborghini\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "ec2-3-81-230-186.compute-1.amazonaws.com:8080/api/v1/franquicia",
+							"host": [
+								"ec2-3-81-230-186",
+								"compute-1",
+								"amazonaws",
+								"com"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"franquicia"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 19 Dec 2024 00:24:23 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Guardado con exito\",\n    \"data\": {\n        \"franquiciaId\": \"f224b033-6bf2-4b6a-9b6d-99f4ed777c1d\",\n        \"nombre\": \"Lamborghini\"\n    },\n    \"statusCode\": 201,\n    \"timestamp\": \"2024-12-18T19:24:23.658345998\"\n}"
+				}
+			]
+		},
+		{
+			"name": "guardar Sucursal",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"franquicia\" : \"Lamborghini\",\r\n    \"nombre\" : \"Lamborghini poblado\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "ec2-3-81-230-186.compute-1.amazonaws.com:8080/api/v1/sucursal",
+					"host": [
+						"ec2-3-81-230-186",
+						"compute-1",
+						"amazonaws",
+						"com"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"sucursal"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "guardar Sucursal",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"franquicia\" : \"Lamborghini\",\r\n    \"nombre\" : \"Lamborghini poblado\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "ec2-3-81-230-186.compute-1.amazonaws.com:8080/api/v1/sucursal",
+							"host": [
+								"ec2-3-81-230-186",
+								"compute-1",
+								"amazonaws",
+								"com"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"sucursal"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 19 Dec 2024 00:25:02 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Guardado con exito\",\n    \"data\": {\n        \"sucursalId\": \"529d010a-02d3-40c7-b2d9-68f9ab9093ff\",\n        \"nombre\": \"Lamborghini poblado\",\n        \"franquicia\": {\n            \"franquiciaId\": \"f224b033-6bf2-4b6a-9b6d-99f4ed777c1d\",\n            \"nombre\": \"Lamborghini\"\n        }\n    },\n    \"statusCode\": 201,\n    \"timestamp\": \"2024-12-18T19:25:02.463445019\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Guardar producto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sucursal\" : \"Lamborghini poblado\",\r\n    \"producto\" : \"Starrato\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "ec2-3-81-230-186.compute-1.amazonaws.com:8080/api/v1/producto",
+					"host": [
+						"ec2-3-81-230-186",
+						"compute-1",
+						"amazonaws",
+						"com"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"producto"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Guardar producto",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sucursal\" : \"Lamborghini poblado\",\r\n    \"producto\" : \"Starrato\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "ec2-3-81-230-186.compute-1.amazonaws.com:8080/api/v1/producto",
+							"host": [
+								"ec2-3-81-230-186",
+								"compute-1",
+								"amazonaws",
+								"com"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"producto"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 19 Dec 2024 00:25:30 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Guardado con exito\",\n    \"data\": {\n        \"productoId\": \"1d266c85-d0ea-4dc6-b7f0-abe0f74eba5a\",\n        \"nombre\": \"Starrato\",\n        \"stock\": 0,\n        \"sucursal\": {\n            \"sucursalId\": \"529d010a-02d3-40c7-b2d9-68f9ab9093ff\",\n            \"nombre\": \"Lamborghini poblado\",\n            \"franquicia\": {\n                \"franquiciaId\": \"f224b033-6bf2-4b6a-9b6d-99f4ed777c1d\",\n                \"nombre\": \"Lamborghini\"\n            }\n        }\n    },\n    \"statusCode\": 201,\n    \"timestamp\": \"2024-12-18T19:25:30.138159434\"\n}"
+				}
+			]
+		},
+		{
+			"name": "deleteProduct",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "ec2-3-81-230-186.compute-1.amazonaws.com:8080/api/v1/producto?productName=488",
+					"host": [
+						"ec2-3-81-230-186",
+						"compute-1",
+						"amazonaws",
+						"com"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"producto"
+					],
+					"query": [
+						{
+							"key": "productName",
+							"value": "488"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actualizar producto",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\" : \"911\",\r\n    \"stock\" : 200\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "ec2-3-81-230-186.compute-1.amazonaws.com:8080/api/v1/producto/:nameProduct",
+					"host": [
+						"ec2-3-81-230-186",
+						"compute-1",
+						"amazonaws",
+						"com"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"producto",
+						":nameProduct"
+					],
+					"variable": [
+						{
+							"key": "nameProduct",
+							"value": "Starrato"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "actualizar producto",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\" : \"911\",\r\n    \"stock\" : 200\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "ec2-3-81-230-186.compute-1.amazonaws.com:8080/api/v1/producto/:nameProduct",
+							"host": [
+								"ec2-3-81-230-186",
+								"compute-1",
+								"amazonaws",
+								"com"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"producto",
+								":nameProduct"
+							],
+							"variable": [
+								{
+									"key": "nameProduct",
+									"value": "Starrato"
+								}
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 19 Dec 2024 00:34:42 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Guardado con exito\",\n    \"data\": {\n        \"productoId\": \"1d266c85-d0ea-4dc6-b7f0-abe0f74eba5a\",\n        \"nombre\": \"911\",\n        \"stock\": 200,\n        \"sucursal\": {\n            \"sucursalId\": \"529d010a-02d3-40c7-b2d9-68f9ab9093ff\",\n            \"nombre\": \"porsche poblado\",\n            \"franquicia\": {\n                \"franquiciaId\": \"f224b033-6bf2-4b6a-9b6d-99f4ed777c1d\",\n                \"nombre\": \"Porsche\"\n            }\n        }\n    },\n    \"statusCode\": 201,\n    \"timestamp\": \"2024-12-18T19:34:42.95437436\"\n}"
+				}
+			]
+		},
+		{
+			"name": "maxStock",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"franquiciaName\": \"Mazda\",\r\n        \"SucursalesName\": [\r\n            {\r\n                \"nombre\": \"Mazda Barranquilla\",\r\n                \"producto\": [\r\n                    {\r\n                        \"productoName\": \"MAzda 3\",\r\n                        \"stock\": 200\r\n                    }\r\n                ]\r\n            },\r\n            {\r\n                \"nombre\": \"Mazda Ctg\",\r\n                \"producto\": [\r\n                    {\r\n                        \"productoName\": \"MAzda 3\",\r\n                        \"stock\": 200\r\n                    }\r\n                ]\r\n            },\r\n            {\r\n                \"nombre\": \"Mazda Mde\",\r\n                \"producto\": [\r\n                    {\r\n                        \"productoName\": \"MAzda 3\",\r\n                        \"stock\": 200\r\n                    }\r\n                ]\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"franquiciaName\": \"BMW\",\r\n        \"SucursalesName\": [\r\n            {\r\n                \"nombre\": \"BMW Barranquilla\",\r\n                \"producto\": [\r\n                    {\r\n                        \"productoName\": \"BMW 3\",\r\n                        \"stock\": 200\r\n                    }\r\n                ]\r\n            },\r\n            {\r\n                \"nombre\": \"BMW Ctg\",\r\n                \"producto\": [\r\n                    {\r\n                        \"productoName\": \"BMW 3\",\r\n                        \"stock\": 200\r\n                    }\r\n                ]\r\n            },\r\n            {\r\n                \"nombre\": \"BMW Mde\",\r\n                \"producto\": [\r\n                    {\r\n                        \"productoName\": \"BMW 3\",\r\n                        \"stock\": 200\r\n                    }\r\n                ]\r\n            }\r\n        ]\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "ec2-3-81-230-186.compute-1.amazonaws.com:8080/api/v1/producto/stock",
+					"host": [
+						"ec2-3-81-230-186",
+						"compute-1",
+						"amazonaws",
+						"com"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"producto",
+						"stock"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "maxStock",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"franquiciaName\": \"Mazda\",\r\n        \"SucursalesName\": [\r\n            {\r\n                \"nombre\": \"Mazda Barranquilla\",\r\n                \"producto\": [\r\n                    {\r\n                        \"productoName\": \"MAzda 3\",\r\n                        \"stock\": 200\r\n                    }\r\n                ]\r\n            },\r\n            {\r\n                \"nombre\": \"Mazda Ctg\",\r\n                \"producto\": [\r\n                    {\r\n                        \"productoName\": \"MAzda 3\",\r\n                        \"stock\": 200\r\n                    }\r\n                ]\r\n            },\r\n            {\r\n                \"nombre\": \"Mazda Mde\",\r\n                \"producto\": [\r\n                    {\r\n                        \"productoName\": \"MAzda 3\",\r\n                        \"stock\": 200\r\n                    }\r\n                ]\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"franquiciaName\": \"BMW\",\r\n        \"SucursalesName\": [\r\n            {\r\n                \"nombre\": \"BMW Barranquilla\",\r\n                \"producto\": [\r\n                    {\r\n                        \"productoName\": \"BMW 3\",\r\n                        \"stock\": 200\r\n                    }\r\n                ]\r\n            },\r\n            {\r\n                \"nombre\": \"BMW Ctg\",\r\n                \"producto\": [\r\n                    {\r\n                        \"productoName\": \"BMW 3\",\r\n                        \"stock\": 200\r\n                    }\r\n                ]\r\n            },\r\n            {\r\n                \"nombre\": \"BMW Mde\",\r\n                \"producto\": [\r\n                    {\r\n                        \"productoName\": \"BMW 3\",\r\n                        \"stock\": 200\r\n                    }\r\n                ]\r\n            }\r\n        ]\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/producto/stock",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"producto",
+								"stock"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 18 Dec 2024 20:53:14 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Datos obtenidos con éxito\",\n    \"data\": [\n        {\n            \"franquiciaNombre\": \"Ferrari\",\n            \"productoNombre\": \"488\",\n            \"sucursalNombre\": \"ferrari Simon Bolivar\",\n            \"maxStock\": 0\n        },\n        {\n            \"franquiciaNombre\": \"Gruopo Volkswagen\",\n            \"productoNombre\": \"bmw m14\",\n            \"sucursalNombre\": \"BMW Medellin\",\n            \"maxStock\": 600\n        },\n        {\n            \"franquiciaNombre\": \"Gruopo Volkswagen\",\n            \"productoNombre\": \"bmw m13\",\n            \"sucursalNombre\": \"BMW Barranquilla\",\n            \"maxStock\": 400\n        },\n        {\n            \"franquiciaNombre\": \"Gruopo Volkswagen\",\n            \"productoNombre\": \"bmw m12\",\n            \"sucursalNombre\": \"BMW Cartagena\",\n            \"maxStock\": 300\n        }\n    ],\n    \"statusCode\": 200,\n    \"timestamp\": \"2024-12-18T15:53:14.2795064\"\n}"
+				}
+			]
+		},
+		{
+			"name": "modificarNombreSucursal",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "ec2-3-81-230-186.compute-1.amazonaws.com:8080/api/v1/sucursal?oldName=Lamborghini poblado&newName=porsche poblado",
+					"host": [
+						"ec2-3-81-230-186",
+						"compute-1",
+						"amazonaws",
+						"com"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"sucursal"
+					],
+					"query": [
+						{
+							"key": "oldName",
+							"value": "Lamborghini poblado"
+						},
+						{
+							"key": "newName",
+							"value": "porsche poblado"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "modificarNombreSucursal",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/sucursal?oldName=BMW Barranquilla&newName=BMW Sincelejo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"sucursal"
+							],
+							"query": [
+								{
+									"key": "oldName",
+									"value": "BMW Barranquilla"
+								},
+								{
+									"key": "newName",
+									"value": "BMW Sincelejo"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 18 Dec 2024 21:19:49 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Modificado con éxito\",\n    \"data\": null,\n    \"statusCode\": 200,\n    \"timestamp\": \"2024-12-18T16:19:49.7227589\"\n}"
+				}
+			]
+		},
+		{
+			"name": "modificarNombreFranquicia",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "ec2-3-81-230-186.compute-1.amazonaws.com:8080/api/v1/franquicia?oldName=Lamborghini&newName=Porsche",
+					"host": [
+						"ec2-3-81-230-186",
+						"compute-1",
+						"amazonaws",
+						"com"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"franquicia"
+					],
+					"query": [
+						{
+							"key": "oldName",
+							"value": "Lamborghini"
+						},
+						{
+							"key": "newName",
+							"value": "Porsche"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "modificarNombreFranquicia",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "ec2-3-81-230-186.compute-1.amazonaws.com:8080/api/v1/franquicia?oldName=Lamborghini&newName=Porsche",
+							"host": [
+								"ec2-3-81-230-186",
+								"compute-1",
+								"amazonaws",
+								"com"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"franquicia"
+							],
+							"query": [
+								{
+									"key": "oldName",
+									"value": "Lamborghini"
+								},
+								{
+									"key": "newName",
+									"value": "Porsche"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 19 Dec 2024 00:32:56 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Modificado con éxito\",\n    \"data\": null,\n    \"statusCode\": 200,\n    \"timestamp\": \"2024-12-18T19:32:56.504313779\"\n}"
+				}
+			]
+		}
+	]
+}

@@ -5,9 +5,9 @@ spring:
     allow-circular-references: true
   datasource:
     driverClassName: org.mariadb.jdbc.Driver
-    url: jdbc:mariadb://localhost:3306/franquicia_db
+    url: jdbc:mariadb://database-2.cfikeqmyiigg.us-east-1.rds.amazonaws.com:3306/franquicia_db
     username: root
-    password: root
+    password: 96Bad96a!
   jpa:
     show-sql: true
     hibernate:

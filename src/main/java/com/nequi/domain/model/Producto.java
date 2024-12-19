@@ -26,7 +26,7 @@ public class Producto {
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID productoId;
 
-    @Column(nullable = false, length = 100)
+    @Column(nullable = false, length = 100, unique = true)
     private String nombre;
 
     @Column(nullable = false)
