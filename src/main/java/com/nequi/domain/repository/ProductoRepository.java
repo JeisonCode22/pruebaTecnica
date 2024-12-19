@@ -16,13 +16,18 @@ public interface ProductoRepository extends JpaRepository<Producto, UUID> {
 
     @Query(value = "SELECT " +
             "p.nombre AS producto_nombre, " +
-            "MAX(p.stock) AS max_stock, " +
+            "p.stock AS max_stock, " +
             "s.nombre AS sucursal_nombre, " +
             "f.nombre AS franquicia_nombre " +
             "FROM producto p " +
             "JOIN sucursal s ON p.sucursal_id = s.sucursal_id " +
             "JOIN franquicia f ON s.franquicia_id = f.franquicia_id " +
-            "GROUP BY s.sucursal_id, f.franquicia_id",
+            "WHERE p.stock = ( " +
+            "    SELECT MAX(p2.stock) " +
+            "    FROM producto p2 " +
+            "    WHERE p2.sucursal_id = p.sucursal_id " +
+            ") " +
+            "ORDER BY f.nombre, s.nombre",
             nativeQuery = true)
     List<MaxProjection> findProductoSucursalFranquicia();
 

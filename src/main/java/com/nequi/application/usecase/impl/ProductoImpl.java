@@ -100,8 +100,6 @@ public class ProductoImpl implements IProducto {
                 .data(productoSucursalFranquicia)
                 .timestamp(LocalDateTime.now(ZoneId.of(ZONE_ID)))
                 .build();
-
-
     }
 }
 
